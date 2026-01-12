@@ -1,0 +1,25 @@
+:root{
+
+  /* background color */
+  --bg-primary: #292929;
+  --bg-secondary: #2a2727;
+  --bg-active: #3a3a3a;
+
+  /* padding */
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+
+  /* gutter */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* font-size */
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+}

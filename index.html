@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="theme.css">
+  <title>Image Editor</title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="left">
+        <div class="top">
+          <label for="image-input" class="btn btn-input">
+            Upload Image
+            <input type="file" name="image-input" id="image-input" hidden>
+          </label>
+          <button id="reset" class="btn btn-reset">Reset</button>
+          <button id="download-btn" class="btn btn-download">Download Now</button>
+        </div>
+        <div class="bottom">
+          <div class="image-container">
+            <img src="" alt="Image" id="image" hidden>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
