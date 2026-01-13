@@ -5,16 +5,89 @@
 }
 html,
 body {
+  
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-primary);
   color: #fff;
 }
+main{
+  height: 100%;
+  width: 100%;
+}
+section{
+  padding: var(--spacing-xl);
+  height: 100%;
+  display: flex;
+  gap: var(--spacing-xl);
+}
+section .left{
+  
+  width: 70%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+section .left .top{
+  border: 1px solid grey;
+  border-radius: 20px;
+  align-self: center;
+  width: 40%;
+  padding: var(--padding-md);
+  display: flex;
+
+  align-items: center;
+  justify-content:space-around
+}
 .btn {
   padding: var(--padding-sm) var(--padding-md);
   background-color: var(--bg-secondary);
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
   font-size: var(--font-md);
   transition: background-color 0.3s;
+  color: aliceblue;
+}
+.btn-reset{
+  background-color: rgb(159, 29, 29) ;
+}
+.btn-download{
+  background-color: green;
+}
+.btn-input{
+  background-color: #605d5d;
+}
+section .left .bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+section .left .bottom .placeholder {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.6;
+}
+section .left .bottom .placeholder i{
+  font-size: 10rem;
+  opacity: 0.6;
+}
+section .left .bottom .placeholder p{
+  font-size: 2rem;
+  margin-left: 5px;
+}
+
+
+
+section .right{
+  padding: var(--padding-lg);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-xl);
+  border: 1px solid grey;
 }
