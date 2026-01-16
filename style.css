@@ -92,13 +92,17 @@ section .right .filters {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--padding-sm);
+  gap: var(--padding-md);
 }
 section .right .filters .filter {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--padding-sm);
+}
+
+section .right .filters .filter p{
+  font-size: large;
 }
 section .right .filters .filter input {
   appearance: none;
