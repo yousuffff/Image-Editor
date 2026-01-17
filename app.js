@@ -1,5 +1,7 @@
 const filterContainer = document.querySelector(".filters");
-
+const imageInput = document.querySelector("#image-input");
+const imgCanvas = document.querySelector("#img-canvas");
+const canvasCtx = imgCanvas.getContext("2d");
 const filters = {
   brigthness: {
     value: 100,
@@ -62,6 +64,7 @@ const filters = {
     unit: "%",
   },
 };
+const placeHolder = document.querySelector(".placeholder")
 
 function inputBuilder(name, value, min, max, unit) {
   const div = document.createElement("div");
@@ -87,8 +90,20 @@ Object.keys(filters).forEach((filter) => {
     filters[filter].value,
     filters[filter].min,
     filters[filter].max,
-    filters[filter].unit
+    filters[filter].unit,
   );
 
   filterContainer.appendChild(filterElement);
+});
+imageInput.addEventListener("change", (e) => {
+  console.log("event fired", e);
+  placeHolder.style.display = "none";
+  const file = e.target.files[0];
+  const img = new Image();
+  img.src = URL.createObjectURL(file);
+  img.onload = () => {
+    imgCanvas.width = img.width;
+    imgCanvas.height = img.height
+    canvasCtx.drawImage(img, 0, 0);
+  };
 });
