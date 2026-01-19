@@ -115,27 +115,78 @@ section .right .filters .filter {
 section .right .filters .filter p {
   font-size: large;
 }
-section .right .filters .filter input {
-  appearance: none;
-}
-section .right .filters .filter input::-webkit-slider-runnable-track {
-  appearance: none;
-  height: 6px;
-  /* border: 2px solid black; */
-  border-radius: 30%;
-}
-section .right .filters .filter input::-webkit-slider-thumb {
-  appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: rgb(147, 33, 33);
-  margin-top: -7px;
-  cursor: pointer;
-}
+
 .img-canvas {
   display: none;
   max-width: 600px;
   width: 100%;
   height: 90vh;
+}
+.preset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preset button {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #444;
+  color: white;
+  border: 1px solid #777;
+  transition: 0.2s;
+}
+
+.preset button:hover {
+  background: #666;
+}
+/* Remove default styling */
+section .right .filters .filter input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Track */
+section
+  .right
+  .filters
+  .filter
+  input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px; /* 🔥 round track */
+  background: linear-gradient(to right, #9f1d1d, #444);
+}
+
+/* Thumb */
+section .right .filters .filter input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%; /* 🔥 round thumb */
+  background-color: #fff;
+  border: 2px solid #9f1d1d;
+  margin-top: -5px; /* center thumb */
+  cursor: pointer;
+}
+
+/* Firefox support */
+section .right .filters .filter input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #444;
+}
+
+section .right .filters .filter input[type="range"]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #9f1d1d;
+}
+input[type="range"] {
+  accent-color: #9f1d1d;
 }
