@@ -212,3 +212,9 @@ resetBtn.addEventListener("click", () => {
   createInput();
   applyFilters();
 });
+ downloadBtn.addEventListener('click',()=>{
+  const link = document.createElement('a')
+  link.download = "edited-img.jpg"
+  link.href = imgCanvas.toDataURL()
+  link.click();
+ })
